@@ -1,0 +1,67 @@
+\documentclass[a4paper,12pt]{extarticle}
+
+\usepackage[utf8]{inputenc}
+\usepackage[bulgarian]{babel} 
+\usepackage{amsmath} 
+\usepackage{amssymb} 
+\usepackage{geometry} 
+\geometry{top=0.5cm, left=2cm, right=2cm}
+\usepackage{multicol} 
+\usepackage{xcolor}
+
+
+\newcommand{\entry}[2]{\textbf{#1 = } #2 \\}
+\newcommand{\lgt}{\fontsize{18pt}{20pt}\selectfont}
+\newcommand{\smt}{\fontsize{13pt}{13pt}\selectfont}
+
+\begin{document}
+
+\section*{\lgt\centering{Основни граници}}
+\begin{multicols}{3}
+\smt{\[\lim_{x \to 0} \frac{\sin x}{x} = 1\]}
+\smt{\[\lim_{t(x) \to 0} \frac{\sin t(x)}{t(x)} = 1\]}
+\smt{\[\lim_{x \to 0} \frac{\arcsin x}{x} = 1\]}
+\smt{\[\lim_{x \to 0} \frac{\tg x}{x} = 1\]}
+\smt{\[\lim_{t(x) \to 0} \frac{\tg t(x)}{t(x)} = 1\]}
+\smt{\[\lim_{x \to 0} \frac{\arctg x}{x} = 1\]}
+\smt{\[\lim_{x \to 0} \frac{\ln (1+x)}{x} = 1\]}
+\smt{\[\lim_{x \to 0} \frac{(1+x)^p - 1}{x} = p\]}
+\smt{\[\lim_{x \to 0} \frac{a^x-1}{x} = \ln a\]}
+\smt{\[\lim_{x \to 0} \frac{e^x-1}{x} = 1\]}
+\smt{\[\lim_{x \to \infty} (1+\frac{1}{x})^x = e\]}
+\smt{\[\lim_{x \to 0} (1+x)^\frac{1}{x} = e\]}
+\end{multicols}
+
+\begin{center}
+\smt{\[\ln(1+x) \sim x+ o(x)\]}
+\smt{\[\sin x \sim x+ o(x)\]}
+\end{center}
+
+\section*{\lgt\centering{Основни производни}}
+\begin{multicols}{3}
+\smt{\[(const)' = 0\]}
+\smt{\[(x^n)' = nx^{n-1}\]}
+\smt{\[(a^x)' = a^x\ln a\]}
+\smt{\[(\log_a x)' = \frac{1}{x\ln a}\]}
+\smt{\[(e^x)' = e^x\]}
+\smt{\[(\ln x)' = \frac{1}{x}\]}
+\smt{\[(\sin x)' = \cos x\]}
+\smt{\[(\cos x)' = -\sin x\]}
+\smt{\[(\tg x)' = \frac{1}{\cos^2 x}\]}
+\smt{\[(\ctg x)' = -\frac{1}{\sin^2 x}\]}
+\smt{\[(\arcsin x)' = \frac{1}{\sqrt{1-x^2}}\]}
+\smt{\[(\arccos x)' = -\frac{1}{\sqrt{1-x^2}}\]}
+\smt{\[(\arctg x)' = \frac{1}{1+x^2}\]}
+\smt{\[(\arcctg x)' = -\frac{1}{1+x^2}\]}
+\end{multicols}
+
+\section*{\lgt\centering{Прозиводни от n-ти ред}}
+\begin{center}
+\smt{\[(\sin x)^{[n]} = \sin (x+n\frac{\pi}{2})\]}
+\smt{\[(a^x)^{[n]} = a^x\ln^n a\]}
+\smt{\[(\ln x)^{[n]} = (-1)^{n-1}(n-1)!\frac{1}{x^n}\]}
+\smt{\[(x^a)^{[n]}:\quad\quad 0<a<n \Rightarrow  0\quad\quad a=n \Rightarrow  n!\quad\quad a>n \Rightarrow  a(a-1)(a-2)\dots(a-n+1)x^{a-n}\]}
+\smt\centering{\[a<0 \Rightarrow (-1)^na(a+1)(a+2)\dots(a+n-1)\frac{1}{x^{a+n}}\]}
+\end{center}
+
+\end{document}
