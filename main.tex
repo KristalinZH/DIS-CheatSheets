@@ -9,6 +9,7 @@
 \usepackage{multicol} 
 \usepackage{xcolor}
 
+\DeclareMathOperator*\uplim{\overline{lim}}
 
 \newcommand{\entry}[2]{\textbf{#1 = } #2 \\}
 \newcommand{\lgt}{\fontsize{18pt}{20pt}\selectfont}
@@ -34,9 +35,62 @@
 \end{multicols}
 
 \begin{center}
+\vspace{-1em}
 \smt{\[\ln(1+x) \sim x+ o(x)\]}
+\vspace{-1em}
 \smt{\[\sin x \sim x+ o(x)\]}
 \end{center}
+
+\section*{\lgt\centering{Критерии за сходимост на редове}}
+\vspace{1em}
+\begin{multicols}{3}
+
+\subsection*{\mdt\centering{Критерий на Даламбер}}
+\vspace{-1em}
+\begin{center}
+\mdt{\[\lim_{n \to \infty} \frac{a_{n+1}}{a_n} = l\]}
+\smt{\[\textbf{l}:
+\left\{
+\begin{array}{l}
+\smt{l<1, \hspace{0.2em} \textbf{сходящ}} \\
+\smt{l>1, \hspace{0.2em} \textbf{разходящ}} \\
+\smt{l=1, \hspace{0.2em} \textbf{неопределеност}}
+\end{array}
+\right.
+\]}
+\end{center}
+
+\subsection*{\mdt\centering{Критерий на Коши}}
+\vspace{-1em}
+\begin{center}
+\mdt{\[\lim_{n \to \infty} \sqrt[n]{a_n} = l\]}
+\smt{\[\textbf{l}:
+\left\{
+\begin{array}{l}
+\smt{l<1, \hspace{0.2em} \textbf{сходящ}} \\
+\smt{l>1, \hspace{0.2em} \textbf{разходящ}} \\
+\smt{l=1, \hspace{0.2em} \textbf{неопределеност}}
+\end{array}
+\right.
+\]}
+\end{center}
+
+\subsection*{\mdt\centering{Критерий на Раабе-Дюамел}}
+\vspace{-1em}
+\begin{center}
+\mdt{\[\lim_{n \to \infty} n(\frac{a_n}{a_{n+1}}-1) = l\]}
+\smt{\[\textbf{l}:
+\left\{
+\begin{array}{l}
+\smt{l>1, \hspace{0.2em} \textbf{сходящ}} \\
+\smt{l<1, \hspace{0.2em} \textbf{разходящ}} \\
+\smt{l=1, \hspace{0.2em} \textbf{неопределеност}}
+\end{array}
+\right.
+\]}
+\end{center}
+
+\end{multicols}
 
 \section*{\lgt\centering{Основни производни}}
 \begin{multicols}{3}
@@ -57,6 +111,7 @@
 \end{multicols}
 
 \section*{\lgt\centering{Прозиводни от n-ти ред}}
+\vspace{-1em}
 \begin{center}
 \smt{\[(\sin x)^{[n]} = \sin (x+n\frac{\pi}{2})\]}
 \smt{\[(a^x)^{[n]} = a^x\ln^n a\]}
@@ -66,6 +121,7 @@
 \end{center}
 
 \section*{\lgt\centering{Формула на Лайбниц}}
+\vspace{-1em}
 \begin{center}
 \smt\centering{\[(f(x)*g(x))^{[n]} = \sum_{k=0}^{n} \binom{n}{k}f(x)^{[n-k]}g(x)^{[k]}\]}
 \end{center}
@@ -87,11 +143,13 @@
 \end{multicols}
 
 \section*{\lgt\centering{Интегриране по части}}
+\vspace{-1em}
 \begin{center}
 \smt\centering{\[\int f(x) \, d(g(x)) = f(x)*g(x) -\int g(x) \, d(f(x))\]}
 \end{center}
 
 \section*{\lgt\centering{Основни свойства на определени интеграли}}
+\vspace{-1em}
 \begin{center}
 \smt{\[1. \hspace{0.2em} \int_a^b (\alpha f(x) \pm \beta g(x)) \, dx \hspace{0.2em} = \hspace{0.2em} \alpha\int_a^b f(x) \, dx \hspace{0.2em} \pm \hspace{0.2em} \beta\int_a^b g(x) \, dx\]}
 \smt{\[2. \hspace{0.2em} \int_a^b f(x) \, dx \hspace{0.2em} = \hspace{0.2em} \int_a^c f(x) \, dx \hspace{0.2em} + \hspace{0.2em} \int_c^b f(x) \, dx \qquad c \in [a,b]\]}
@@ -102,11 +160,13 @@
 \end{center}
 
 \section*{\lgt\centering{Интегриране по части на определен интеграл}}
+\vspace{-1em}
 \begin{center}
 \smt\centering{\[\int_a^b f(x) \, d(g(x)) \hspace{0.2em} = \hspace{0.2em} f(x)*g(x)\Big|_a^b \hspace{0.2em} - \hspace{0.2em} \int_a^b g(x) \, d(f(x))\]}
 \end{center}
 
 \section*{\lgt\centering{Основни формули на определени интеграли}}
+\vspace{-1em}
 \begin{center}
 \smt\centering{\[1. \hspace{0.2em} f(x) \text{ е} \hspace{0.2em}  \textbf{непрекъсната} \hspace{0.2em}  \text{в }[-a,a] \hspace{0.2em} \text{и} \hspace{0.2em}  \textbf{четна} \text{. Тогава: } \hspace{0.2em} \int_{-a}^a f(x) \, dx \hspace{0.2em} = \hspace{0.2em} 2\int_0^a f(x) \, dx\]}
 \smt\centering{\[2. \hspace{0.2em} f(x) \text{ е} \hspace{0.2em}  \textbf{непрекъсната} \hspace{0.2em}  \text{в }[-a,a] \hspace{0.2em} \text{и} \hspace{0.2em}  \textbf{нечетна} \text{. Тогава: } \hspace{0.2em} \int_{-a}^a f(x) \, dx \hspace{0.2em} = \hspace{0.2em} 0\]}
@@ -116,6 +176,7 @@
 \end{center}
 
 \section*{\lgt\centering{Геомтетрични приложения на определения интеграл}}
+\vspace{-2em}
 \begin{center}
 \lgt\centering{\[\textbf{Лице}\]}
 \smt\centering{\[f(x) \hspace{0.2em} \text{и} \hspace{0.2em} g(x) \hspace{0.2em} \text{са } \textbf{непрекъснати} \text{ в} \hspace{0.2em} [a,b] \hspace{0.2em} \text{и} \hspace{0.2em} f(x) \leq g(x) \hspace{0.2em} \text{за всяко} \hspace{0.2em} x \hspace{0.2em} \text{в} \hspace{0.2em} [a,b] \text{. Тогава:}\]}
@@ -123,6 +184,7 @@
 \mdt\centering{\[\textbf{Полярни координати}\]}
 \smt\centering{\[\rho = f(\theta) \hspace{0.2em} \text{е} \hspace{0.2em} \textbf{непрекъсната} \text{ и } \textbf{неотрицателна} \text{ за } \theta \hspace{0.2em} \text{в} \hspace{0.2em} [\alpha,\beta] \text{. Тогава:}\]}
 \smt\centering{\[S = \frac{1}{2} \int_{\alpha}^{\beta} f(\theta)^2 \, d\theta\]}
+\vspace{1em}
 \lgt\centering{\[\textbf{Дължина на крива}\]}
 \smt\centering{\[x = f(t) \hspace{0.2em} \text{и} \hspace{0.2em} y  =  g(t) \hspace{0.2em} \text{са } \textbf{непрекъснати} \text{ и } \textbf{диференцируеми} \text{ за} \hspace{0.2em} t \hspace{0.2em} \text{в} \hspace{0.2em} [a,b] \text{. Тогава:} \]}
 \smt\centering{\[l \hspace{0.2em} = \hspace{0.2em} \int_{a}^{b} \sqrt{f'(t)^2+g'(t)^2} \, dt\]}
@@ -133,5 +195,73 @@
 \smt\centering{\[f(x) \hspace{0.2em} \text{e } \textbf{непрекъсната} \text{ в} \hspace{0.2em} [a,b] \text{. Тогава:} \]}
 \smt\centering{\[V \hspace{0.2em} = \hspace{0.2em} \pi \int_{a}^{b} f(x)^2 \, dt\]}
 \end{center}
+
+\section*{\lgt\centering{Основни несобствени интеграли за сравняване}}
+\begin{multicols}{3}
+
+\subsection*{\mdt\centering{Първи род}}
+\vspace{-1em}
+\begin{center}
+\mdt{\[\int_{a}^{+\infty}\frac{1}{x^\lambda} \, dx \hspace{0.8em} (a>0)\]}
+\mdt{\[\int_{-\infty}^{b}\frac{1}{x^\lambda} \, dx \hspace{0.8em} (b<0)\]}
+\smt{\[\text{са}:
+\left\{
+\begin{array}{l}
+\smt{\textbf{сходящи} \hspace{0.4em}\lambda>1} \\
+\smt{\textbf{разходящи} \hspace{0.4em}\lambda\leq1} 
+\end{array}
+\right.
+\]}
+\end{center}
+
+\subsection*{\mdt\centering{Втори род}}
+\vspace{-1em}
+\begin{center}
+\mdt{\[\int_{a}^{b}\frac{1}{(x-a)^\lambda} \, dx\]}
+\mdt{\[\int_{a}^{b}\frac{1}{(b-x)^\lambda} \, dx\]}
+\smt{\[\text{са}:
+\left\{
+\begin{array}{l}
+\smt{\textbf{сходящи} \hspace{0.4em}\lambda<1} \\
+\smt{\textbf{разходящи} \hspace{0.4em}\lambda\geq1} 
+\end{array}
+\right.
+\]}
+\end{center}
+
+\subsection*{\mdt\centering{Първи род}}
+\vspace{-1em}
+\begin{center}
+\mdt{\[\int_{1}^{+\infty}\frac{1}{x^p\ln^qx} \, dx\]}
+\smt{\[\text{е}:
+\left\{
+\begin{array}{l}
+\smt{\textbf{сходящ} \hspace{0.4em}p>1} \\
+\smt{\textbf{сходящ} \hspace{0.4em}p=1 \hspace{0.2em} \text{и} \hspace{0.2em} q>1} \\
+\smt{\textbf{разходящ} \hspace{0.4em}p=1 \hspace{0.2em} \text{и} \hspace{0.2em} q\leq1} \\
+\smt{\textbf{разходящ} \hspace{0.4em}p<1} 
+\end{array}
+\right.
+\]}
+\end{center}
+
+\end{multicols}
+
+\section*{\lgt\centering{Формули за радиус на сходимост на степенни редове}}
+\begin{multicols}{2}
+
+\subsection*{\mdt\centering{Формула на Даламбер}}
+\vspace{-1em}
+\begin{center}
+\mdt{\[R = \lim_{n \to \infty} \left| \frac{a_n}{a_{n+1}} \right|\]}
+\end{center}
+
+\subsection*{\mdt\centering{Формула на Коши-Адамар}}
+\vspace{-1em}
+\begin{center}
+\mdt{\[R = \frac{1}{\displaystyle \overline{\lim_{n \to \infty}} \sqrt[n]{\left| a_n \right|}}\]}
+\end{center}
+
+\end{multicols}
 
 \end{document}
